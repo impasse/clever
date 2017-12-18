@@ -1,0 +1,12 @@
+{
+  "name": "clever",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "html": "browser-sync start -s -f dist/*",
+    "css": "stylus -w -o dist < style.styl"
+  },
+  "author": "",
+  "license": "ISC"
+}

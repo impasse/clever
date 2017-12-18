@@ -1,0 +1,153 @@
+html, body
+    margin: 0
+    border: 0
+
+body
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+    background: #f7f7f7
+    font-family: 'Helvetica Neue', Arial, 'Open Sans', 'Hiragino Sans GB', -apple-system, 'Lantinghei SC', 'Microsoft Yahei', sans-serif
+    -webkit-font-smoothing: subpixel-antialiased
+    & > *
+        min-width 720px
+        width 55%
+        border-radius: 10px
+        box-shadow: 0px 10px 20px 0px rgba(236, 236, 236, 0.86)
+        box-sizing: border-box
+        padding: 20px 30px
+        background: #fff
+        @media screen and (max-width: 800px)
+            & > *
+                width 95%
+            / header h1
+                font-size: 36px !important
+
+header
+    background: url(../img/header_bg.jpg) no-repeat
+    position: relative
+    background-position: center
+    margin-top: 60px
+    height: 300px
+    min-height: 40vh
+    padding-top: 30px
+    user-select: none
+    & h1, & h1:active, & h1:visited
+        margin: 0
+        z-index: 2
+        text-shadow: -1px 3px 15px rgba(0, 0, 0, .15)
+        & > a
+            color #fff
+            text-decoration: none
+    .sub-title
+        color: rgba(255, 255, 255, .7)
+        font-size: 12px
+    .menu
+        display: flex
+        justify-content: flex-end
+        width 100%
+        position: absolute
+        bottom: 20px
+        right: 0
+        width: fit-content
+        padding: 10px 0 10px 25px
+        background: rgba(255,255,255,.6)
+        border-radius: 999em 0 0 999em
+        &-item
+            color #fff
+            width: fit-content
+            display: block
+            text-decoration: none
+            margin-right 30px
+            height: 16px
+            line-height: @height
+            text-shadow: 0px 3px 7px rgba(0,0,0,0.4)
+            &:hover
+                transform: translateY(-1px)
+section
+    padding: 0 0 20px 0
+    margin-top: 30px
+    overflow: hidden
+    .article-header
+        width 100%
+        position: relative
+        border-radius: 10px 10px 0 0
+        &:hover
+            opacity: .8
+    h2
+        transition: all .2s
+        padding: 20px 20px 0 20px
+        margin: 0
+        padding-bottom: 60px
+        text-shadow: 1px -2px 9px rgba(0, 0, 0, .3)
+        color: #FAFAFA
+        & > a
+            color: #FAFAFA
+            text-decoration: none
+    &:nth-child(5n) .article-header
+        background: #9C27B0
+    &:nth-child(5n + 1) .article-header
+        background: #E91E63
+    &:nth-child(5n + 2) .article-header
+        background: #009688
+    &:nth-child(5n + 3) .article-header
+        background: #F44336
+    &:nth-child(5n + 4) .article-header
+        background: #5C6BC0
+    @keyframes waves
+        0%
+            transform translateX(-720px)
+        100%
+            transform translateX(-360px)
+    .waves
+        position: absolute
+        bottom: -5px
+        width: 100%
+        animation: waves 2.5s linear infinite
+    article
+        padding 10px 20px 0 20px
+        color: #424242
+        font-size: 13px
+    .article-info
+        color: #BDBDBD
+        margin-top: 20px
+        padding: 0 20px 0 20px
+        font-size: 13px
+        & span[class^="icon"]
+            margin-right: 25px
+            &::before
+                margin-right 5px
+    /.article-detail
+        min-height: 700px
+        display: flex
+        flex-direction: column
+        article
+            flex: 1
+.comment
+    margin-top: 20px
+footer
+    margin: 30px 0 50px 0
+    .powerby
+        color #9E9E9E
+        text-align: center;
+        font-size: 12px;
+        margin-top: 20px;
+    .back-to-top
+        position: fixed
+        cursor: pointer
+        display block
+        display: none
+        right: 40px
+        bottom: 60px
+        width: 40px
+        height: 40px
+        line-height: 40px
+        border-radius: 999em
+        box-shadow: 1px 3px 10px rgba(0, 0, 0, .15)
+        &::before
+            margin-left: 12px;
+        &:hover
+            background: #efefef
+            transform: scale3d(1.1, 0.9, 1.1)
+            transition: transform .2s
